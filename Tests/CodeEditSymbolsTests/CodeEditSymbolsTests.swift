@@ -9,32 +9,34 @@ final class CodeEditSymbolsTests: XCTestCase {
 
     // MARK: VAULT
 
+    private let record: Bool = false
+
     func testCreateNSImageVault() {
-        let image = NSImage.symbol(named: "vault")
+        let image = NSImage.vault
         let view = NSImageView(image: image)
-        assertSnapshot(matching: view, as: .image)
+        assertSnapshot(matching: view, as: .image, record: record)
     }
 
     func testCreateNSImageVaultFill() {
-        let image = NSImage.symbol(named: "vault.fill")
+        let image = NSImage.vault_fill
         let view = NSImageView(image: image)
-        assertSnapshot(matching: view, as: .image)
+        assertSnapshot(matching: view, as: .image, record: record)
     }
 
     // MARK: COMMIT
 
     func testCreateNSImageCommit() {
-        let image = NSImage.symbol(named: "commit")
+        let image = NSImage.commit
         let view = NSImageView(image: image)
-        assertSnapshot(matching: view, as: .image)
+        assertSnapshot(matching: view, as: .image, record: record)
     }
 
     // MARK: CHECKOUT
 
     func testCreateNSImageCheckout() {
-        let image = Image(symbol: "checkout")
-        let view: NSView = NSHostingController(rootView: image).view
-        assertSnapshot(matching: view, as: .image(size: view.intrinsicContentSize))
+        let image = NSImage.checkout
+        let view: NSView = NSImageView(image: image)
+        assertSnapshot(matching: view, as: .image, record: record)
     }
 
     // MARK: - Image Tests
@@ -42,30 +44,30 @@ final class CodeEditSymbolsTests: XCTestCase {
     // MARK: VAULT
 
     func testCreateImageVault() {
-        let image = Image(symbol: "vault")
+        let image = Image.vault
         let view: NSView = NSHostingController(rootView: image).view
-        assertSnapshot(matching: view, as: .image(size: view.intrinsicContentSize))
+        assertSnapshot(matching: view, as: .image(size: view.intrinsicContentSize), record: record)
     }
 
     func testCreateImageVaultFill() {
-        let image = Image(symbol: "vault.fill")
+        let image = Image.vault_fill
         let view: NSView = NSHostingController(rootView: image).view
-        assertSnapshot(matching: view, as: .image(size: view.intrinsicContentSize))
+        assertSnapshot(matching: view, as: .image(size: view.intrinsicContentSize), record: record)
     }
 
     // MARK: COMMIT
 
     func testCreateImageCommit() {
-        let image = Image(symbol: "commit")
+        let image = Image.commit
         let view: NSView = NSHostingController(rootView: image).view
-        assertSnapshot(matching: view, as: .image(size: view.intrinsicContentSize))
+        assertSnapshot(matching: view, as: .image(size: view.intrinsicContentSize), record: record)
     }
 
     // MARK: CHECKOUT
 
     func testCreateImageCheckout() {
-        let image = Image(symbol: "checkout")
+        let image = Image.checkout
         let view: NSView = NSHostingController(rootView: image).view
-        assertSnapshot(matching: view, as: .image(size: view.intrinsicContentSize))
+        assertSnapshot(matching: view, as: .image(size: view.intrinsicContentSize), record: record)
     }
 }
