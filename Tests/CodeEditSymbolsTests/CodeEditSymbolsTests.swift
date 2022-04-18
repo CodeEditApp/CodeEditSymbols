@@ -14,12 +14,14 @@ final class CodeEditSymbolsTests: XCTestCase {
     func testCreateNSImageVault() {
         let image = NSImage.vault
         let view = NSImageView(image: image)
+        view.appearance = .init(named: .aqua)
         assertSnapshot(matching: view, as: .image, record: record)
     }
 
     func testCreateNSImageVaultFill() {
         let image = NSImage.vault_fill
         let view = NSImageView(image: image)
+        view.appearance = .init(named: .aqua)
         assertSnapshot(matching: view, as: .image, record: record)
     }
 
@@ -28,6 +30,7 @@ final class CodeEditSymbolsTests: XCTestCase {
     func testCreateNSImageCommit() {
         let image = NSImage.commit
         let view = NSImageView(image: image)
+        view.appearance = .init(named: .aqua)
         assertSnapshot(matching: view, as: .image, record: record)
     }
 
@@ -35,7 +38,8 @@ final class CodeEditSymbolsTests: XCTestCase {
 
     func testCreateNSImageCheckout() {
         let image = NSImage.checkout
-        let view: NSView = NSImageView(image: image)
+        let view = NSImageView(image: image)
+        view.appearance = .init(named: .aqua)
         assertSnapshot(matching: view, as: .image, record: record)
     }
 
@@ -46,12 +50,14 @@ final class CodeEditSymbolsTests: XCTestCase {
     func testCreateImageVault() {
         let image = Image.vault
         let view: NSView = NSHostingController(rootView: image).view
+        view.appearance = .init(named: .aqua)
         assertSnapshot(matching: view, as: .image(size: view.intrinsicContentSize), record: record)
     }
 
     func testCreateImageVaultFill() {
         let image = Image.vault_fill
         let view: NSView = NSHostingController(rootView: image).view
+        view.appearance = .init(named: .aqua)
         assertSnapshot(matching: view, as: .image(size: view.intrinsicContentSize), record: record)
     }
 
@@ -60,6 +66,7 @@ final class CodeEditSymbolsTests: XCTestCase {
     func testCreateImageCommit() {
         let image = Image.commit
         let view: NSView = NSHostingController(rootView: image).view
+        view.appearance = .init(named: .aqua)
         assertSnapshot(matching: view, as: .image(size: view.intrinsicContentSize), record: record)
     }
 
@@ -68,6 +75,7 @@ final class CodeEditSymbolsTests: XCTestCase {
     func testCreateImageCheckout() {
         let image = Image.checkout
         let view: NSView = NSHostingController(rootView: image).view
+        view.appearance = .init(named: .aqua)
         assertSnapshot(matching: view, as: .image(size: view.intrinsicContentSize), record: record)
     }
 }
