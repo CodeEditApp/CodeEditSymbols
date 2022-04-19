@@ -1,36 +1,8 @@
-# CodeEditSymbols
-
-A package containing all custom assets for CodeEdit. These are mostly custom [SF Symbols](https://developer.apple.com/design/human-interface-guidelines/sf-symbols/overview/#creating-custom-symbols).
-
-## How to use
-
-### `NSImage`:
-
-```swift
-import CodeEditSymbols
-
-let nsImage = NSImage.symbol(named: "name_of_the_symbol")
-
-// or using the static property:
-
-let nsImage1 = NSImage.name_of_the_symbol
-```
-
-### `Image`:
-
-```swift
-import CodeEditSymbols
-
-let image = Image(symbol: "name_of_the_symbol")
-
-// or using the static property:
-
-let image1 = Image.name_of_the_symbol
-```
-
-## Creating a new Asset
+# Add Custom Symbols
 
 To create a new asset, follow the guide on [Apple's developer website](https://developer.apple.com/documentation/uikit/uiimage/creating_custom_symbol_images_for_your_app).
+
+## Overview
 
 Add the `.svg` you exported from `SF Symbols.app` to the `Symbols.xcassets` catalog.
 
@@ -46,11 +18,12 @@ static let your_symbol_name: NSImage = .symbol(named: "your_symbol_name")
 
 > **Important:** Make sure your symbol looks great in every font weight.
 
+
 ## Tests
 
 Also include snapshot tests for each symbol for `Image` as well as `NSImage`:
 
-### `NSImage`:
+### NSImage:
 
 ```swift
 // MARK: YOUR_SYMBOL_NAME
@@ -63,7 +36,7 @@ func testCreateNSImageYourSymbolName() {
 }
 ```
 
-### `Image`:
+### Image:
 
 ```swift
 // MARK: YOUR_SYMBOL_NAME
@@ -84,10 +57,10 @@ You might have a symbol called `lock` and one where the symbol is inside a squar
 
 ### Example of a `.fill` Variant
 
-<img width="256" alt="Screen Shot 2022-04-18 at 00 29 57" src="https://user-images.githubusercontent.com/9460130/163734754-9eff9671-bb19-46de-92b0-c4c0de27c23b.png">
+![Fill Variant](fill_variant.png)
 
 ## Annotate the Symbol
 
 As of version 3 of `SF Symbols` it is possible to create `multi-color`, `hierarchical` and `palette` annotations inside the `SF Symbols.app`. Be sure to annotate it accordingly if appropriate.
 
-<img width="266" alt="Screen Shot 2022-04-18 at 00 40 26" src="https://user-images.githubusercontent.com/9460130/163734926-d4da422a-d7f0-4b93-a05b-3d1700c1b97c.png">
+![Annotating](annotating.png)
