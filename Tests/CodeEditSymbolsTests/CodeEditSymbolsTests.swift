@@ -43,6 +43,22 @@ final class CodeEditSymbolsTests: XCTestCase {
         assertSnapshot(matching: view, as: .image, record: record)
     }
 
+    // MARK: BREAKPOINT
+
+    func testCreateNSImageBreakpoint() {
+        let image = NSImage.breakpoint
+        let view = NSImageView(image: image)
+        view.appearance = .init(named: .aqua)
+        assertSnapshot(matching: view, as: .image, record: record)
+    }
+
+    func testCreateNSImageBreakpointFill() {
+        let image = NSImage.breakpoint_fill
+        let view = NSImageView(image: image)
+        view.appearance = .init(named: .aqua)
+        assertSnapshot(matching: view, as: .image, record: record)
+    }
+
     // MARK: - Image Tests
 
     // MARK: VAULT
@@ -74,6 +90,22 @@ final class CodeEditSymbolsTests: XCTestCase {
 
     func testCreateImageCheckout() {
         let image = Image.checkout
+        let view: NSView = NSHostingController(rootView: image).view
+        view.appearance = .init(named: .aqua)
+        assertSnapshot(matching: view, as: .image(size: view.intrinsicContentSize), record: record)
+    }
+
+    // MARK: BREAKPOINT
+
+    func testCreateImageBreakpoint() {
+        let image = Image.breakpoint
+        let view: NSView = NSHostingController(rootView: image).view
+        view.appearance = .init(named: .aqua)
+        assertSnapshot(matching: view, as: .image(size: view.intrinsicContentSize), record: record)
+    }
+
+    func testCreateImageBreakpointFill() {
+        let image = Image.breakpoint_fill
         let view: NSView = NSHostingController(rootView: image).view
         view.appearance = .init(named: .aqua)
         assertSnapshot(matching: view, as: .image(size: view.intrinsicContentSize), record: record)
