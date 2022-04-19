@@ -21,6 +21,8 @@ public extension Image {
     static let commit: Image = .init(symbol: "commit")
     static let checkout: Image = .init(symbol: "checkout")
 
+    // add static properties for your symbols above this line
+
 }
 
 
@@ -39,5 +41,7 @@ public extension NSImage {
     static let vault_fill: NSImage = .symbol(named: "vault.fill")
     static let commit: NSImage = .symbol(named: "commit")
     static let checkout: NSImage = .symbol(named: "checkout")
+
+    // add static properties for your symbols above this line
 
 }
