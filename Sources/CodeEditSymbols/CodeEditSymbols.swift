@@ -23,6 +23,7 @@ public extension Image {
     static let breakpoint: Image = .init(symbol: "breakpoint")
     static let breakpoint_fill: Image = .init(symbol: "breakpoint.fill")
     static let customChevronUpChevronDown: Image = .init(symbol: "custom.chevron.up.chevron.down")
+    static let github: Image = .init(symbol: "github")
 
     // add static properties for your symbols above this line
 
@@ -47,6 +48,7 @@ public extension NSImage {
     static let breakpoint: NSImage = .symbol(named: "breakpoint")
     static let breakpoint_fill: NSImage = .symbol(named: "breakpoint.fill")
     static let customChevronUpChevronDown: NSImage = .symbol(named: "custom.chevron.up.chevron.down")
+    static let github: NSImage = .symbol(named: "github")
     
     // add static properties for your symbols above this line
 
