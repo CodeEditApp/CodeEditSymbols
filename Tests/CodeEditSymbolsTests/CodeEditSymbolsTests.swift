@@ -59,6 +59,13 @@ final class CodeEditSymbolsTests: XCTestCase {
         assertSnapshot(matching: view, as: .image, record: record)
     }
 
+    func testCreateNSImageGitHub() {
+        let image = NSImage.github
+        let view = NSImageView(image: image)
+        view.appearance = .init(named: .aqua)
+        assertSnapshot(matching: view, as: .image, record: record)
+    }
+
     // MARK: - Image Tests
 
     // MARK: VAULT
@@ -106,6 +113,13 @@ final class CodeEditSymbolsTests: XCTestCase {
 
     func testCreateImageBreakpointFill() {
         let image = Image.breakpoint_fill
+        let view: NSView = NSHostingController(rootView: image).view
+        view.appearance = .init(named: .aqua)
+        assertSnapshot(matching: view, as: .image(size: view.intrinsicContentSize), record: record)
+    }
+
+    func testCreateImageGitHub() {
+        let image = Image.github
         let view: NSView = NSHostingController(rootView: image).view
         view.appearance = .init(named: .aqua)
         assertSnapshot(matching: view, as: .image(size: view.intrinsicContentSize), record: record)
