@@ -43,6 +43,15 @@ final class CodeEditSymbolsTests: XCTestCase {
         assertSnapshot(matching: view, as: .image, record: record)
     }
 
+    // MARK: BRANCH
+
+    func testCreateNSImageBranch() {
+        let image = NSImage.branch
+        let view = NSImageView(image: image)
+        view.appearance = .init(named: .aqua)
+        assertSnapshot(matching: view, as: .image, record: record)
+    }
+
     // MARK: BREAKPOINT
 
     func testCreateNSImageBreakpoint() {
@@ -97,6 +106,15 @@ final class CodeEditSymbolsTests: XCTestCase {
 
     func testCreateImageCheckout() {
         let image = Image.checkout
+        let view: NSView = NSHostingController(rootView: image).view
+        view.appearance = .init(named: .aqua)
+        assertSnapshot(matching: view, as: .image(size: view.intrinsicContentSize), record: record)
+    }
+
+    // MARK: BRANCH
+
+    func testCreateImageBranch() {
+        let image = Image.branch
         let view: NSView = NSHostingController(rootView: image).view
         view.appearance = .init(named: .aqua)
         assertSnapshot(matching: view, as: .image(size: view.intrinsicContentSize), record: record)
