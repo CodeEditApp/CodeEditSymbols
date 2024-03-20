@@ -17,15 +17,22 @@ public extension Image {
     // MARK: - Symbols
 
     static let vault: Image = .init(symbol: "vault")
-    static let vault_fill: Image = .init(symbol: "vault.fill")
+    static let vaultFill: Image = .init(symbol: "vault.fill")
     static let commit: Image = .init(symbol: "commit")
     static let checkout: Image = .init(symbol: "checkout")
     static let branch: Image = .init(symbol: "branch")
     static let breakpoint: Image = .init(symbol: "breakpoint")
-    static let breakpoint_fill: Image = .init(symbol: "breakpoint.fill")
-    static let customChevronUpChevronDown: Image = .init(symbol: "custom.chevron.up.chevron.down")
+    static let breakpointFill: Image = .init(symbol: "breakpoint.fill")
+    static let chevronUpChevronDown: Image = .init(symbol: "chevron.up.chevron.down")
     static let github: Image = .init(symbol: "github")
-
+    static let docJava: Image = .init(symbol: "doc.java")
+    static let docJavascript: Image = .init(symbol: "doc.javascript")
+    static let docJson: Image = .init(symbol: "doc.json")
+    static let docPython: Image = .init(symbol: "doc.python")
+    static let docRuby: Image = .init(symbol: "doc.ruby")
+    static let squareSplitHorizontalPlus: Image = .init(symbol: "square.split.horizontal.plus")
+    static let squareSplitVerticalPlus: Image = .init(symbol: "square.split.vertical.plus")
+    
     // add static properties for your symbols above this line
 
 }
@@ -43,14 +50,21 @@ public extension NSImage {
     // MARK: - Symbols
 
     static let vault: NSImage = .symbol(named: "vault")
-    static let vault_fill: NSImage = .symbol(named: "vault.fill")
+    static let vaultFill: NSImage = .symbol(named: "vault.fill")
     static let commit: NSImage = .symbol(named: "commit")
     static let checkout: NSImage = .symbol(named: "checkout")
     static let branch: NSImage = .symbol(named: "branch")
     static let breakpoint: NSImage = .symbol(named: "breakpoint")
-    static let breakpoint_fill: NSImage = .symbol(named: "breakpoint.fill")
-    static let customChevronUpChevronDown: NSImage = .symbol(named: "custom.chevron.up.chevron.down")
+    static let breakpointFill: NSImage = .symbol(named: "breakpoint.fill")
+    static let chevronUpChevronDown: NSImage = .symbol(named: "chevron.up.chevron.down")
     static let github: NSImage = .symbol(named: "github")
+    static let docJava: Image = .symbol(named: "doc.java")
+    static let docJavascript: Image = .symbol(named: "doc.javascript")
+    static let docJson: Image = .symbol(named: "doc.json")
+    static let docPython: Image = .symbol(named: "doc.python")
+    static let docRuby: Image = .symbol(named: "doc.ruby")
+    static let squareSplitHorizontalPlus: Image = .symbol(named: "square.split.horizontal.plus")
+    static let squareSplitVerticalPlus: Image = .symbol(named: "square.split.vertical.plus")
     
     // add static properties for your symbols above this line
 
