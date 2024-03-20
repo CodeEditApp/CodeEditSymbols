@@ -58,13 +58,13 @@ public extension NSImage {
     static let breakpointFill: NSImage = .symbol(named: "breakpoint.fill")
     static let chevronUpChevronDown: NSImage = .symbol(named: "chevron.up.chevron.down")
     static let github: NSImage = .symbol(named: "github")
-    static let docJava: Image = .symbol(named: "doc.java")
-    static let docJavascript: Image = .symbol(named: "doc.javascript")
-    static let docJson: Image = .symbol(named: "doc.json")
-    static let docPython: Image = .symbol(named: "doc.python")
-    static let docRuby: Image = .symbol(named: "doc.ruby")
-    static let squareSplitHorizontalPlus: Image = .symbol(named: "square.split.horizontal.plus")
-    static let squareSplitVerticalPlus: Image = .symbol(named: "square.split.vertical.plus")
+    static let docJava: NSImage = .symbol(named: "doc.java")
+    static let docJavascript: NSImage = .symbol(named: "doc.javascript")
+    static let docJson: NSImage = .symbol(named: "doc.json")
+    static let docPython: NSImage = .symbol(named: "doc.python")
+    static let docRuby: NSImage = .symbol(named: "doc.ruby")
+    static let squareSplitHorizontalPlus: NSImage = .symbol(named: "square.split.horizontal.plus")
+    static let squareSplitVerticalPlus: NSImage = .symbol(named: "square.split.vertical.plus")
     
     // add static properties for your symbols above this line
 
