@@ -43,8 +43,8 @@ public extension NSImage {
     /// Returns a NSImage representing a custom SF Symbol
     /// - Parameter named: The name of the symbol in `Symbols.xcassets`
     /// - Returns: a NSImage
-    static func symbol(named: String) -> NSImage {
-        Bundle.module.image(forResource: named) ?? .init()
+    static func symbol(named: String) -> NSImage? {
+        Bundle.module.image(forResource: named)
     }
 
     // MARK: - Symbols
